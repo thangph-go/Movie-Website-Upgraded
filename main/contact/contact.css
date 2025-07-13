@@ -1,0 +1,76 @@
+/* contact.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: #181616;
+}
+
+/* Phần đầu */
+.heading {
+    display: flex;
+    background-color: #181616;
+    padding: 20px 260px;
+    color: #ffffff;
+    justify-content: space-between;
+}
+
+.heading a {
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.container {
+    background-color: #EEEEEE;
+    margin: 20px auto;
+    width: 60%;
+    padding: 20px;
+}
+
+.container h1 {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 70px;
+}
+
+.container h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #CCCCCC;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid #CCCCCC;
+    padding: 10px 0;
+}
+
+li i {
+    font-size: 30px;
+}
+
+li a {
+    color: #181616;
+    font-size: 20px;
+}
+
+li a:hover {
+    color: rgb(240,128,128)
+}
+

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cornhub</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="home.css"/>
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Thanh MENU -->
+    <div class="nav-wrapper">
+        <div class="container">
+            <div class="nav">
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    <i class='bx bx-movie-play bx-tada' style="color: #c0392b"></i>
+                    <span style="color: #F1AF00">Corn</span><span style="color: #c0392b">hub</span>
+                </a>
+
+                <!-- Thanh tìm kiếm -->
+                <form class="search-form" id="search-form">
+                    <input type="text" id="search-input" placeholder="Tìm kiếm phim...">
+                    <button type="submit"><i class='bx bx-search'></i></button>
+                </form>
+                
+                <!-- Phần menu -->
+                <ul class="nav-menu navigation">
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#trending">Thịnh hành</a></li>
+                    <li><a href="#movies">Phim</a></li>
+                    <li><a href="#series">Series</a></li>
+                    <li><a href="#cartoons">Hoạt Hình</a></li>
+                    <li>
+                        <a href="#" class="accountButton">Tài khoản</a>
+                        <div id="accountInfoPopup" class="account-info-popup">
+                            <h3>Thông tin tài khoản</h3>
+                            <p>Tên người dùng: <strong id="popupUsername"></strong></p>
+                            <p>Email: <strong id="popupEmail"></strong></p>
+                            <a href="favorites.html" class="favorite-link">Phim yêu thích</a> 
+                            <a href="#" class="log-out" id="logoutButtonPopup">Đăng xuất</a>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Cuối thanh MENU  -->
+
+    <!-- Banner phim chính -->
+    <div class="movie-section">
+        <div id="hero-carousel" class="owl-carousel carousel-nav-center"></div>
+    </div>
+
+    <!-- Danh sách phim mục: LATEST -->
+    <div class="movie-section">
+        <div class="section-header">
+            MỚI NHẤT
+        </div>
+        <div id="latest-movies-carousel" class="movies-slide carousel-nav-center owl-carousel"></div>
+    </div>
+    <!-- Cuối danh sách phim mục: LATEST -->
+
+    <!-- Đầu danh sách phim mục: TRENDING -->
+    <div class="movie-section"  id="trending">
+        <div class="section-header">
+            HIỆN ĐANG THỊNH HÀNH
+        </div>
+        <div id="trending-movies-carousel" class="movies-slide carousel-nav-center owl-carousel"></div>
+    </div>
+    <!-- Cuối danh sách phim mục: TRENDING -->
+
+    <!-- Đầu danh sách mục: MOVIES -->
+    <div class="movie-section" id="movies">
+        <div class="section-header">
+            PHIM ĐIỆN ẢNH
+        </div>
+        <div id="movies-carousel" class="movies-slide carousel-nav-center owl-carousel"></div>
+    </div>
+    <!-- Cuối danh sách mục: MOVIE -->
+
+    <!-- Đầu danh sách mục: SERIES -->
+    <div class="movie-section" id="series">
+        <div class="section-header">
+            SERIES PHIM
+        </div>
+        <div id="series-carousel" class="movies-slide carousel-nav-center owl-carousel"></div>
+    </div>
+    <!-- Cuối danh sách mục: SERIES -->
+
+    
+    <!-- Đầu danh sách mục: CARTOONS -->
+    <div class="movie-section" id="cartoons">
+        <div class="section-header">
+            PHIM HOẠT HÌNH
+        </div>
+        <div id="cartoons-carousel" class="movies-slide carousel-nav-center owl-carousel"></div>
+    </div>
+    <!-- Cuối danh sách mục: CARTOONS -->
+
+
+    <!-- Phần: PRICING  -->
+    <div class="movie-section">
+        <div class="container">
+            <!-- Phần đầu  -->
+            <div class="pricing-header">
+                <span style="color: #F1AF00">Gói cư</span><span style="color: #c0392b">ớc trên</span>
+                <span style="color: #F1AF00">Corn</span><span style="color: #c0392b">hub</span>
+            </div>
+            <!-- Phần các gói dịch vụ  -->
+            <div class="row">
+
+                <!-- Gói dịch vụ 1: BASIC  -->
+                <div class="col-3">
+                    <div class="pricing-box highlight">
+                        <!-- Tên gói và giá -->
+                        <div class="pricing-box-header">
+                            <div class="version">Cơ bản</div>
+                            <div class="price">77.000vnđ /tháng</div>
+                        </div>
+                        <!-- Dịch vụ được nhận  -->
+                        <div class="pricing-box-content">
+                            <p>Độc quyền</p>
+                            <p>Số thiết bị có thể xem cùng lúc: 1</p>
+                            <p>70+ Phim hàng đầu</p>
+                            <p>Chất lượng hình và âm: Tốt</p>
+                            <p><del>Kênh truyền hình</del></p>
+                        </div>
+                        <!-- Nút đăng kí  -->
+                        <div class="pricing-box-content">
+                            <a href="#" class="btn btn-hover price-alert" data-target="customAlert-1">
+                                <span>Đăng ký ngay</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cuối gói dịch vụ 1: BASIC  -->
+
+                <!-- Gói dịch vụ 2: PREMIUM  -->
+                <div class="col-3">
+                    <div class="pricing-box highlight">
+                        <!-- Tên gói và giá -->
+                        <div class="pricing-box-header">
+                            <div class="version">Tiêu chuẩn</div>
+                            <div class="price">170.000vnđ /tháng</div>
+                        </div>
+                        <!-- Dịch vụ được nhận  -->
+                        <div class="pricing-box-content">
+                            <p>Độc quyền</p>
+                            <p>Số thiết bị có thể xem cùng lúc: 3</p>
+                            <p>200+ Phim hàng đầu</p>
+                            <p>Chất lượng hình và âm: Tuyệt vời</p>
+                            <p><del>Kênh truyền hình</del></p>
+                        </div>
+                        <!-- Nút đăng kí  -->
+                        <div class="pricing-box-content">
+                            <a href="#" class="btn btn-hover price-alert" data-target="customAlert-1">
+                                <span>Đăng ký ngay</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cuối gói dịch vụ 2: PREMIUM  -->
+
+                <!-- Gói dịch vụ 3: VIP  -->
+                <div class="col-3">
+                    <div class="pricing-box highlight">
+                        <!-- Tên gói và giá -->
+                        <div class="pricing-box-header">
+                            <div class="version">Cao cấp</div>
+                            <div class="price">250.000vnđ /tháng</div>
+                        </div>
+                        <!-- Dịch vụ được nhận  -->
+                        <div class="pricing-box-content">
+                            <p>Độc quyền</p>
+                            <p>Số thiết bị có thể xem cùng lúc: 7</p>
+                            <p>500+ Phim hàng đầu</p>
+                            <p>Chất lượng hình và âm: Tốt nhất</p>
+                            <p>Kênh truyền hình</p>
+                        </div>
+                        <!-- Nút đăng kí  -->
+                        <div class="pricing-box-content">
+                            <a href="#" class="btn btn-hover price-alert" data-target="customAlert-1">
+                                <span>Đăng ký ngay</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cuối gói dịch vụ 3: VIP -->
+
+                <!-- Thông báo 1 -->
+                <div id="customAlert-1" class="alert-box">
+                    <p><strong>Cảm ơn bạn vì đã quan tâm đến các gói dịch vụ của chúng tôi! </strong></p> 
+                    <p>Hiện tại chúng tôi vẫn đang trong quá trình phát triển, mong bạn có thể quay lại sau.</p>
+                    <button onclick="closeAlert('customAlert-1')">OK</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Cuối phần: PRICING  -->
+
+
+    <!-- Đầu phần chân  -->
+    <footer class="section">
+        <div class="container">
+            <div class="row">
+                <!-- Phần chân 1  -->
+                <div class="col-4">
+                    <div class="content">
+                        <!-- Logo  -->
+                        <a href="#" class="logo">
+                            <i class='bx bx-movie-play bx-tada' style="color: #c0392b"></i>
+                            <span style="color: #F1AF00">Corn</span><span style="color: #c0392b">hub</span>
+                        </a>
+                        <!-- Mô tả  -->
+                        <p>
+                            Khám phá thư viện khổng lồ với hàng ngàn phim bom tấn, phim bộ hấp dẫn và chương trình độc quyền được cập nhật liên tục. Xem mọi lúc, mọi nơi chỉ với một cú nhấp chuột.
+                        </p>
+                        <!-- Mạng xã hội  -->
+                        <div class="social-list">
+                            <a href="https://www.facebook.com/pham.thang.323089?locale=vi_VN" class="social-item" target="_blank">
+                                <i class="bx bxl-facebook"></i>
+                            </a>
+
+                            <a href="#" class="social-item" target="_blank">
+                                <i class="bx bxl-twitter"></i>
+                            </a>
+
+                            <a href="#" class="social-item" target="_blank">
+                                <i class="bx bxl-instagram"></i>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/thang-pham-hong-437013355/" class="social-item" target="_blank">
+                                <i class='bx bxl-linkedin-square'></i> 
+                            </a>
+                        
+                        </div>
+                        <!-- Cuối phần: Mạng xã hội   -->
+                    </div>
+                </div>
+                <!-- Cuối phần chân 1  -->
+
+                <!-- Phần chân 2  -->
+                <div class="col-5">
+                    <div class="row">
+                        <!-- Phần thông tin 1  -->
+                        <div class="col-3">
+                            <div class="content">
+                                <p><b>Cornhub</b></p>
+                                <ul class="footer-menu">
+                                    <li><a href="./contact/contact.html#social" target="_blank">Về chúng tôi</a></li>
+                                    <li><a href="#" class="accountButton">Hồ sơ của tôi</a></li>
+                                    <li><a href="#" class="accountButton">Tài khoản</a></li>
+                                    <li><a href="./contact/contact.html" target="_blank">Liên hệ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Phần thông tin 2  -->
+                        <div class="col-3">
+                            <div class="content">
+                                <p><b>Duyệt qua</b></p>
+                                <ul class="footer-menu">
+                                    <li><a href="./policy/policy.html#term_of_use" target="_blank">Điều khoản sử dụng</a></li>
+                                    <li><a href="./policy/policy.html#private" target="_blank">Chính sách bảo mật</a></li>
+                                    <li><a href="./policy/policy.html" target="_blank">Chọn gói dịch vụ</a></li>
+                                    <li><a href="./policy/policy.html#policy" target="_blank">Thông tin pháp lý</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Phần thông tin 3  -->
+                        <div class="col-3">
+                            <div class="content">
+                                <p><b>Trợ giúp</b></p>
+                                <ul class="footer-menu">
+                                    <li><a href="./contact/contact.html" target="_blank">Trung tâm trợ giúp</a></li>
+                                    <li><a href="./policy/policy.html" target="_blank">Câu hỏi thường gặp</a></li>
+                                    <li><a href="./policy/policy.html#term_of_use" target="_blank">Trung tâm đa phương tiện</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Cuối phần chân 2  -->
+
+                <!-- Phần tải xuống -->
+                <div class="col-5">
+                    <p><b>Tải xuống</b></p>
+                    <ul class="download">
+                        <li><a href="#" class="price-alert" data-target="customAlert-2"><img src="./images/download/google-play.png" alt=""></a></li>
+                        <li><a href="#" class="price-alert" data-target="customAlert-2"><img src="./images/download/app-store.png" alt=""></a></li>
+                    </ul>
+                </div>
+
+                <!-- Thông báo 2 -->
+                <div id="customAlert-2" class="alert-box">
+                    <p><strong>Chúng tôi đang hoàn thiện phiên bản di động để mang đến trải nghiệm tốt hơn.</strong></p>
+                    <p>Trong thời gian này, hãy truy cập bằng máy tính nhé!</p>
+                    <button onclick="closeAlert('customAlert-2')">OK</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Cuối phần chân  -->
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <span><i class='bx bx-copyright'></i></span>Copyright 2025 Phạm Hồng Thắng
+    </div>
+
+
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <!-- owl carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    
+    <!-- javascript -->
+    <script src="app.js"></script> 
+    <script src="movies_data.js"></script>
+
+</body>
+</html>

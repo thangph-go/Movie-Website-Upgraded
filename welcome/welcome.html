@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <!-- Link đến css -->
+    <link rel="stylesheet" href="welcome.css">
+    <!-- BoxIcon -->
+    <link href='https://unpkg.com/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
+    <!-- OWL CAROUSEL -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="overlay"></div>
+            <div class="heading">
+                <a href="#" class="logo">
+                    <i class='bx bx-movie-play bx-tada' style="color: #c0392b"></i>
+                    <span style="color: #F1AF00">Corn</span><span style="color: #c0392b">hub</span>
+                </a>
+                <a href="../sign-in/sign_in.html" class="btn btn-hover">
+                    <span>Đăng nhập</span>
+                </a>
+            </div>
+            <div class="header-content">
+                <h1>
+                    Phim, series không giới hạn và nhiều nội dung khác
+                </h1>
+                <h2>
+                    Các gói thành viên đa dạng. Huỷ bất cứ lúc nào.
+                </h2>
+                <h4>Bạn đã sẵn sàng xem chưa? Hãy bắt đầu tạo tài khoản thành viên của bạn.</h4>
+                <a href="../sign-in/sign_in.html?form=register" class="btn btn-hover">
+                    <span>Đăng ký</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <section>
+        <div class="main-block">
+            <div class="section-header">
+                Phim cực hay
+            </div>
+            <div class="owl-carousel nav-center">
+                <div class="demo">
+                    <a href="#" class="watch">
+                        <img src="../main/images/cartoons/zootopia.png" alt="h">
+                    </a>
+                </div>
+                <div class="demo">
+                    <a href="#" class="watch">
+                        <img src="../main/images/cartoons/your-name.jpg" alt="h">
+                    </a>
+                </div>
+                <div class="demo">
+                    <a href="#" class="watch">
+                        <img src="../main/images/movies/bat-man.jpg" alt="h">
+                    </a>
+                </div>
+                <div class="demo">
+                    <a href="#" class="watch">
+                        <img src="../main/images/series/stranger-things.png" alt="h">
+                    </a>
+                </div>
+                <div class="demo">
+                    <a href="#" class="watch">
+                        <img src="../main/images/series/alice-in-borderland.jpg" alt="h">
+                    </a>
+                </div>
+                <div class="demo">
+                    <a href="#" class="watch">
+                        <img src="../main/images/cartoons/weathering.jpg" alt="h">
+                    </a>
+                </div>
+                <div class="demo">
+                    <a href="#" class="watch">
+                        <img src="../main/images/movies/shogun.png" alt="h">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Thông báo đăng nhập -->
+            <div id="customAlert" class="alert-box">
+                    <p>Vui lòng <strong>đăng nhập</strong> để xem phim!</p>
+                    <button onclick="closeAlert()">OK</button>
+            </div>
+
+            <div class="section-header">
+                Thêm lý do để tham gia
+            </div>
+            <div class="reasons-block">
+                <div class="reason">
+                    <h1>Thưởng thức trên TV của bạn</h1>
+                    <p>Xem trên TV thông minh, Playstation, Xbox, Chromecast, Apple TV, đầu phát Blu-ray và nhiều thiết bị khác.</p>
+                    <div class="icon">
+                        <img src="https://img.icons8.com/?size=100&id=Dw5WruDdmiEZ&format=png&color=000000" alt="">
+                    </div>
+                </div>
+                <div class="reason">
+                    <h1>Tải xuống nội dung để xem ngoại tuyến</h1>
+                    <p>Lưu lại những nội dung yêu thích một cách dễ dàng và luôn có thứ để xem.</p>
+                    <div class="icon">
+                        <img src="https://img.icons8.com/?size=100&id=MgeSqljOTSdx&format=png&color=000000" alt="">
+                    </div>
+                </div>
+                <div class="reason">
+                    <h1>Xem ở mọi nơi</h1>
+                    <p>Phát trực tuyến không giới hạn phim và series trên điện thoại, máy tính bảng, máy tính xách tay và TV.</p>
+                    <div class="icon">
+                        <img src="https://img.icons8.com/?size=100&id=lJ8WDZqNWc2q&format=png&color=000000" alt="">
+                    </div>
+                </div>
+                <div class="reason">
+                    <h1>Tạo hồ sơ cho trẻ em</h1>
+                    <p>Đưa các em vào những cuộc phiêu lưu với nhân vật được yêu thích trong một không gian riêng. Tính năng này đi kèm miễn phí với tư cách thành viên của bạn.</p>
+                    <div class="icon">
+                        <img src="https://img.icons8.com/?size=100&id=95311&format=png&color=000000" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="questions-block main-block">
+        <div class="section-header">
+            Câu hỏi thường gặp
+        </div>
+        <div class="faq-container">
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Cornhub là gì?</span>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Cornhub là dịch vụ phát trực tuyến mang đến đa dạng các loại series, phim, anime, phim tài liệu đoạt giải thưởng và nhiều nội dung khác trên hàng nghìn thiết bị có kết nối Internet.</p>
+                    <p>Bạn có thể xem bao nhiêu tùy thích, bất cứ lúc nào bạn muốn mà không gặp phải một quảng cáo nào - tất cả chỉ với một mức giá thấp hàng tháng. Luôn có những nội dung mới để bạn khám phá và những series, phim mới được bổ sung mỗi tuần!</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Tôi phải trả bao nhiêu tiền để xem Cornhub?</span>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Giá gói Cornhub phụ thuộc vào gói bạn chọn. Bạn có thể xem thông tin chi tiết về các gói và giá trên trang web chính thức của Cornhub. Tuy nhiên Cornhub cũng có bản miễn phí.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Tôi có thể xem ở đâu?</span>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Bạn có thể xem Cornhub trên mọi thiết bị có kết nối Internet và ứng dụng Cornhub, bao gồm smart TV, máy chơi game, đầu phát đa phương tiện, điện thoại thông minh, máy tính bảng và máy tính.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Làm thế nào để hủy?</span>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Bạn có thể hủy gói đăng ký Cornhub bất cứ lúc nào trực tuyến một cách dễ dàng. Không có phí hủy và bạn có thể bắt đầu hoặc ngừng tài khoản của mình bất cứ lúc nào.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Tôi có thể xem gì trên Cornhub?</span>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Cornhub có một thư viện nội dung khổng lồ bao gồm phim, series TV, phim tài liệu, chương trình thiếu nhi, anime và nhiều nội dung gốc của Cornhub.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Cornhub có phù hợp cho trẻ em không?</span>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Trải nghiệm Cornhub Trẻ em có sẵn trong gói dịch vụ của bạn, trao cho phụ huynh quyền kiểm soát trong khi các em có thể thưởng thức các bộ phim và chương trình phù hợp cho gia đình tại không gian riêng.</p>
+                    <p>Hồ sơ Trẻ em đi kèm tính năng kiểm soát của cha mẹ (được bảo vệ bằng mã PIN), cho phép bạn giới hạn độ tuổi cho nội dung con mình được phép xem, cũng như chặn những phim hoặc chương trình mà bạn không muốn các em nhìn thấy.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-block">
+        <div class="last-ask">
+            <h4>Bạn đã sẵn sàng xem chưa? Hãy bắt đầu tạo tài khoản thành viên của bạn.</h4>
+            <a href="../sign-in/sign_in.html?form=register" class="btn btn-hover">
+                <span>Đăng ký</span>
+            </a>
+        </div>
+        <div class="title">
+            Bạn có câu hỏi? Liên hệ với chúng tôi.
+        </div>
+        <div class="contact">
+       
+                <ul class="col">
+                    <li><a href="../main/policy/policy.html#private" target="_blank">Quyền riêng tư</a></li>
+                    <li><a href="https://fast.com/" target="_blank">Kiểm tra tốc độ</a></li>
+                    <li><a href="../main/policy/policy.html#term_of_use" target="_blank">Điều khoản sử dụng</a></li>
+                </ul>
+    
+                <ul class="col">
+                    <li><a href="../main/contact/contact.html" target="_blank">Trung tâm trợ giúp</a></li>
+                    <li><a href="../main/policy/policy.html#cookie">Tuỳ chọn cookie</a></li>
+                    <li><a href="../main/policy/policy.html#policy" target="_blank">Thông báo pháp lý</a></li>
+                </ul>
+                <ul class="col">
+                    <li><a href="../sign-in/sign_in.html">Tài khoản</a></li>
+                    <li><a href="../main/policy/policy.html" target="_blank">Các cách xem</a></li>
+                    <li><a href="../main/policy/policy.html" target="_blank">Chỉ có trên Cornhub</a></li>
+                </ul>
+                <ul class="col">
+                    <li><a href="../main/policy/policy.html" target="_blank">Trung tâm đa phương tiện</a></li>
+                    <li><a href="../main/contact/contact.html" target="_blank">Liên hệ với chúng tôi</a></li>
+                </ul>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <span><i class='bx  bx-copyright'></i></span>Copyright 2025 Phạm Hồng Thắng
+    </div>
+
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <!-- OWL CAROUSEL -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    
+    <!-- Script -->
+    <script src="welcome.js"></script>
+</body>
+</html>

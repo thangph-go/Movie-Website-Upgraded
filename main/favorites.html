@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phim yêu thích - Cornhub</title>
+    <!-- css -->
+    <link rel="stylesheet" href="home.css"/>
+     <link rel="stylesheet" href="copyright.css"/>
+     <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Thanh menu -->
+    <div class="nav-wrapper">
+        <div class="container">
+            <div class="nav">
+                <a href="home.html" class="logo">
+                    <i class='bx bx-movie-play bx-tada' style="color: #c0392b"></i>
+                    <span style="color: #F1AF00">Corn</span><span style="color: #c0392b">hub</span>
+                </a>
+                <ul class="nav-menu navigation">
+                    <li><a href="home.html">Trang chủ</a></li>
+                    <li><a href="home.html#trending">Thịnh hành</a></li>
+                    <li><a href="home.html#movies">Phim</a></li>
+                    <li><a href="home.html#series">Series</a></li>
+                    <li><a href="home.html#cartoons">Hoạt Hình</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Phần phim yêu thích -->
+    <div class="content">
+        <div class="search-result-container">
+            <div class="section-header">
+                PHIM YÊU THÍCH CỦA BẠN
+            </div>
+            <div class="movies-grid" id="favorites-list"></div>
+        </div>
+    </div>
+
+    <!-- copyright -->
+    <div class="copyright">
+        <span><i class='bx bx-copyright'></i></span>Copyright 2025 Phạm Hồng Thắng
+    </div>
+
+    
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- javascript -->
+    <script src="movies_data.js"></script> 
+    <script src="favorites.js"></script> </body>
+</html>

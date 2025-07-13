@@ -1,0 +1,398 @@
+/* welcome.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #181616;
+    color: #ffffff;
+}
+
+
+header {
+    position: relative;
+    max-width: 100%;
+    height: 600px;
+    background-image: url("background.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* margin-bottom: 40px; */
+    border-bottom: 5px solid #c0392b;
+}
+
+.container {
+    max-width: 1920px;
+    padding: 20px 40px;
+    margin: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+}
+
+.heading a {
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+/* THIẾT LẬP NÚT*/
+.btn {
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    margin-right: 70px;
+}
+
+/* THIẾT LẬP HIỆU ỨNG CỦA NÚT */
+.btn-hover::before {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #c0392b;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-hover:hover::before {
+    width: 100%;
+}
+
+.btn span {
+    z-index: 1;
+}
+
+.header-content {
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+.header-content h1 {
+    padding: 0 30px;
+    font-size: 55px;
+    font-weight: 900;
+    font-family: "Roboto";
+}
+
+.header-content h2 {
+    padding: 30px 0;
+}
+
+
+.header-content a {
+    text-decoration: none;
+    margin: 20px auto;
+}
+
+.main-block {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.section-header {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    font-family: "Roboto";
+}
+
+
+
+.demo {
+    width: 230px;
+    height: 330px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.demo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* đảm bảo ảnh không bị méo và luôn vừa khối */
+    transition: transform 0.4s ease;
+    display: block;
+}
+
+.demo:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+.demo:hover img {
+    transform: scale(1.1);
+}
+
+
+/* pop-up */
+.alert-box {
+    display: none;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    background: #1e1e2f;
+    padding: 25px 35px;
+    border-radius: 12px;
+    font-size: 1.2em;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    border: 3px solid #444444;
+}
+
+.alert-box p {
+    margin: 0 0 15px;
+}
+
+.alert-box button {
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: 600;
+    background-color: #c0392b;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.alert-box button:hover {
+    background-color: #8B0016;
+}
+
+/* Thiết lập nút điều hướng  */
+.owl-nav button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.owl-nav button i {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    font-size: 3rem;
+}
+
+.owl-nav button:hover i {
+    color: #c0392b;
+}
+
+.nav-center {
+    position: relative;
+    display: flex;
+}
+
+.owl-nav .owl-prev {
+    position: absolute;
+    left: 5px;
+}
+
+.owl-nav .owl-next {
+    position: absolute;
+    right: 5px;
+}
+
+
+.reasons-block {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+}
+
+.reason {
+    position: relative;
+    background-color: #333446;
+    width: 35%;
+    height: 400px;
+    margin: 0 10px;
+    padding: 35px 0 10px 15px;
+    border-radius: 15px;
+    color: #B8CFCE;
+}
+
+.reason p {
+    padding: 10px 10px 0 0;
+    color: #7F8CAA;
+}
+
+.reason:hover {
+    transition: transform 0.4s ease-in-out;
+    transform: translateY(-15px);
+}
+
+.icon {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+
+/* Phần câu hỏi thường gặp */
+.questions-block {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.faq-container {
+    width: 100%;
+    background-color: #303030;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #444;
+}
+
+
+.faq-question {
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #404040;
+}
+
+.toggle-icon {
+    font-size: 1.8em;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    background-color: #1e1e1e;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.faq-answer p {
+    margin: 15px 0;
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #7F8CAA;
+}
+
+/* Class active để hiển thị câu trả lời */
+.faq-item.active .faq-question {
+    background-color: #404040;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 20px;
+}
+
+.faq-item.active .toggle-icon {
+    transform: rotate(45deg);
+}
+
+
+.last-ask {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.last-ask a {
+    margin: 20px 0;
+    text-decoration: none;
+}
+
+.title {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    color: rgb(169,169,169);
+}
+
+/* Liên hệ */
+.contact {
+    display: flex;
+    padding-left: 20px;
+    width: 100%;
+}
+
+.col {
+    width: 25%;
+    padding-right: 30px;
+    list-style-type: none;
+}
+
+
+.col a{
+    display: inline-block;
+    color: #547792;
+    line-height: 2rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.col a:hover {
+    transform: translateX(5px);
+    color: #B8CFCE;
+}
+
+.copyright {
+    border-top: 2px solid rgb(169,169,169);
+    padding: 15px 0;
+    margin-top: 100px;
+    text-align: center;
+    color: rgb(169,169,169);
+}
+
+.copyright i {
+    vertical-align: middle;
+}
+

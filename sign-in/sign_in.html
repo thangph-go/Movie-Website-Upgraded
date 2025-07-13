@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Đăng Nhập</title>
+    <link rel="stylesheet" href="sign_in.css">
+</head>
+<body id="signin-page">
+    
+    <div class="wrapper">
+        <a href="../welcome/welcome.html">
+            <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+        </a>
+        <div class="form-box login">
+            <h2>Đăng nhập</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label>Mật khẩu</label>
+                </div>
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox">Ghi nhớ tôi
+                    </label>
+                    <a href="#" class="forgot-password-link">Quên mật khẩu?</a>
+                </div>
+                <button type="submit" class="btn">Đăng nhập</button>
+                <div class="login-register">
+                    <p>Bạn chưa có tài khoản?
+                        <a href="#" class="register-link">Đăng ký ngay</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>Đăng ký</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" required>
+                    <label>Tên người dùng</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label>Mật khẩu</label>
+                </div>
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox">Ghi nhớ tôi
+                    </label>
+                </div>
+                <button type="submit" class="btn">Đăng ký</button>
+                <div class="login-register">
+                    <p>Bạn đã có tài khoản?
+                        <a href="#" class="login-link">Đăng nhập ngay</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box forgot-password">
+            <h2>Đặt lại mật khẩu</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" required id="forgot-password-email">
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" required id="new-password">
+                    <label>Mật khẩu mới</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" required id="confirm-new-password">
+                    <label>Xác nhận mật khẩu mới</label>
+                </div>
+                <button type="submit" class="btn" id="reset-password-btn">Đặt lại mật khẩu</button>
+                <div class="login-register">
+                    <p>
+                        <a href="#" class="back-to-login-link">Quay lại đăng nhập</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+        </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="sign_in.js"></script>
+</body>
+</html>

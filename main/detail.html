@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Xem phim: </title>
+    <!-- css -->
+    <link rel="stylesheet" href="detail.css"/>
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Phần đầu -->
+    <header class="heading">
+        <a href="home.html" class="logo">
+            <i class='bx bx-movie-play bx-tada' style="color: #c0392b"></i>
+            <span style="color: #F1AF00">Corn</span><span style="color: #c0392b">hub</span>
+        </a>
+        <a href="home.html" class="btn btn-hover">
+            <span>Quay về trang chủ</span>
+        </a>
+    </header>
+
+    <!-- Phần thông tin phim -->
+    <div class="container">
+        <img id="moviePoster" class="movie-detail-poster" src="" alt="Poster phim">
+        <div class="movie-detail-info">
+            <h1 id="movieTitle">Tên phim</h1>
+            <p id="movieDescription" class="movie-description">Mô tả chi tiết của phim...</p>
+            
+            <div class="rating-duration">
+                <span><i class="bx bxs-star"></i> <span id="movieRating"></span></span>
+                <span><i class="bx bxs-time"></i> <span id="movieDuration"></span></span>
+                <span><span id="movieQuality"></span></span>
+                <span><span id="movieAgeRestriction"></span></span>
+            </div>
+
+            <p class="info-line"><strong>Thể loại:</strong> <span id="movieGenre"></span></p>
+            <p class="info-line"><strong>Năm phát hành:</strong> <span id="movieReleaseYear"></span></p>
+            <p class="info-line"><strong>Đạo diễn:</strong> <span id="movieDirector"></span></p>
+            <p class="info-line"><strong>Diễn viên chính:</strong> <span id="movieActors"></span></p>
+        </div>
+    </div>
+
+    <!-- Phần chiếu phim -->
+    <div class="movie">
+        <iframe id="movieTrailer" class="watch" 
+            src=""
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    
+    <!-- javascipt -->
+    <script src="movies_data.js"></script>
+    <script src="detail.js"></script>
+</body>
+</html>
