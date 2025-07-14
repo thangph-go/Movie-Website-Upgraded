@@ -1,13 +1,10 @@
 $(document).ready(() => {
     let navText = ["<i class='bx bx-chevron-left'></i>", "<i class='bx bx-chevron-right'></i>"];
 
-    // Lấy danh sách ID phim yêu thích từ localStorage
     function getFavorites() {
         const favorites = localStorage.getItem('favoriteMovies');
         return favorites ? JSON.parse(favorites) : [];
     }
-
-    //Lưu danh sách ID phim yêu thích vào localStorage
     function saveFavorites(favorites) {
         localStorage.setItem('favoriteMovies', JSON.stringify(favorites));
     }
@@ -109,9 +106,6 @@ $(document).ready(() => {
         });
 
         carouselContainer.innerHTML = bannersHtml;
-
-        // Khởi tạo Owl Carousel cho banner chính sau khi nội dung đã được thêm vào
-        // Đảm bảo phần này chỉ chạy MỘT LẦN cho #hero-carousel
         $(carouselContainer).owlCarousel({
             items: 1,
             dots: false,
@@ -124,7 +118,7 @@ $(document).ready(() => {
     }
 
 
-    // Hàm để hiển thị các slide phim vào một carousel cụ thể (dùng cho các carousel phim bên dưới)
+    // Hàm để hiển thị các slide phim vào một carousel cụ thể
     function displayMoviesIntoCarousel(containerId, requiredType) {
         const carouselContainer = document.getElementById(containerId);
         if (!carouselContainer) {
@@ -133,14 +127,12 @@ $(document).ready(() => {
         }
 
         const filteredMovies = moviesData.filter(movie => movie.type === requiredType);
-
         let moviesHtml = '';
         filteredMovies.forEach(movie => {
             moviesHtml += createMovieCard(movie);
         });
 
         carouselContainer.innerHTML = moviesHtml;
-
         $(carouselContainer).owlCarousel({
             items: 4,
             dots: false,
@@ -153,7 +145,6 @@ $(document).ready(() => {
 
 
     displayBannersIntoCarousel('hero-carousel', 'banners');
-
     displayMoviesIntoCarousel('latest-movies-carousel', 'latest');
     displayMoviesIntoCarousel('trending-movies-carousel', 'trending');
     displayMoviesIntoCarousel('movies-carousel', 'movies');
@@ -166,7 +157,6 @@ $(document).ready(() => {
             e.stopPropagation();
             const movieId = $(this).data('id');
             let favorites = getFavorites();
-
             const heartIcon = $(this).find('i');
 
             if (favorites.includes(movieId)) {
@@ -181,7 +171,6 @@ $(document).ready(() => {
     }
 
     handleFavoriteClick();
-
     $('.owl-carousel').on('translated.owl.carousel', function(event) {
         handleFavoriteClick();
     });
@@ -191,14 +180,12 @@ $(document).ready(() => {
     const accountButton = document.querySelectorAll('.accountButton');
     const accountInfoPopup = document.getElementById('accountInfoPopup');
     const logoutButtonPopup = document.getElementById('logoutButtonPopup');
-
     const loggedInUser = sessionStorage.getItem('loggedInUser');
 
     if (loggedInUser) {
         popupUsernameSpan.textContent = loggedInUser;
 
         const emailFromLocalStorage = Object.keys(localStorage).find(key => {
-            //Bỏ qua khóa 'favoriteMovies' khi tìm kiếm email
             if (key === 'favoriteMovies') return false;
             try {
                 const userData = JSON.parse(localStorage.getItem(key));
@@ -208,7 +195,6 @@ $(document).ready(() => {
             }
         });
 
-
         if (emailFromLocalStorage) {
             popupEmailSpan.textContent = emailFromLocalStorage;
         } else {
@@ -216,7 +202,7 @@ $(document).ready(() => {
         }
     }
 
-    // Toggle pop-up
+    // pop-up tài khoản
     accountButton.forEach( acc => {
         acc.addEventListener('click', (event) => {
             event.stopPropagation();
@@ -226,9 +212,6 @@ $(document).ready(() => {
         });
     });
 
-    
-
-    // Đóng pop-up khi click ngoài
     document.addEventListener('click', (event) => {
         const isClickOnButton = Array.from(accountButton).some(button => button.contains(event.target));
 
@@ -237,7 +220,6 @@ $(document).ready(() => {
         }
     });
 
-    // Đăng xuất
     const handleLogout = () => {
         sessionStorage.removeItem('isLoggedIn');
         sessionStorage.removeItem('loggedInUser');
@@ -260,7 +242,6 @@ $(document).ready(() => {
             const query = searchInput.value.trim();
 
             if (query) {
-                // Chuyển hướng đến trang search.html với query
                 window.location.href = `search.html?query=${encodeURIComponent(query)}`;
             }
         });
@@ -268,7 +249,7 @@ $(document).ready(() => {
 });
 
 
-//  Pop-up thông báo pricing
+//  Pop-up thông báo bảng giá
 function showAlert(alertId) {
     document.getElementById(alertId).style.display = 'block';
 }

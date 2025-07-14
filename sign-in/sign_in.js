@@ -6,37 +6,30 @@ const registerLink = document.querySelector('.register-link');
 const forgotPasswordLink = document.querySelector('.forgot-password-link');
 const backToLoginLink = document.querySelector('.back-to-login-link');
 
-// Lấy các form
 const loginForm = document.querySelector('.form-box.login form');
 const registerForm = document.querySelector('.form-box.register form');
 const forgotPasswordForm = document.querySelector('.form-box.forgot-password form');
 
-// Xử lý khi click vào nút "Register" trong form Login
 registerLink.addEventListener('click', () => {
     wrapper.classList.remove('active-forgot-password');
     wrapper.classList.add('active');
 });
 
-// Xử lý khi click vào nút "Login" trong form Register
 loginLink.addEventListener('click', () => {
     wrapper.classList.remove('active');
     wrapper.classList.remove('active-forgot-password');
 });
 
-// NEW: Handle click on "Forgot Password?" link
 forgotPasswordLink.addEventListener('click', (e) => {
     e.preventDefault();
     wrapper.classList.remove('active');
     wrapper.classList.add('active-forgot-password');
 });
 
-// NEW: Handle click on "Back to Login" link
 backToLoginLink.addEventListener('click', (e) => {
     e.preventDefault();
     wrapper.classList.remove('active-forgot-password');
 });
-
-// ----------------- LOGIC XỬ LÝ ĐĂNG KÝ VÀ ĐĂNG NHẬP -----------------
 
 
 // Xử lý sự kiện submit form ĐĂNG KÝ

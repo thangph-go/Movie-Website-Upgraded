@@ -40,7 +40,7 @@ header {
 .wrapper {
     position: relative;
     width: 400px;
-    height: 440px; /* Default height for login */
+    height: 440px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .5);
     border-radius: 20px;
@@ -56,12 +56,11 @@ header {
 }
 
 .wrapper.active {
-    height: 520px; /* Height for register */
+    height: 520px;
 }
 
-/* NEW: height for forgot password */
 .wrapper.active-forgot-password {
-    height: 480px; /* Adjust as needed for forgot password form */
+    height: 480px;
 }
 
 
@@ -80,7 +79,6 @@ header {
     transform: translateX(-100%);
 }
 
-/* NEW: Translate for forgot password */
 .wrapper.active-forgot-password .form-box.login {
     transform: translateX(-100%);
 }
@@ -93,17 +91,16 @@ header {
     transform: translateX(0);
 }
 
-/* NEW: Translate for forgot password */
 .wrapper.active-forgot-password .form-box.register {
-    transform: translateX(100%); /* Keep register hidden */
+    transform: translateX(100%);
 }
 
 .wrapper .form-box.forgot-password {
-    transform: translateX(100%); /* Initially hidden to the right */
+    transform: translateX(100%);
 }
 
 .wrapper.active-forgot-password .form-box.forgot-password {
-    transform: translateX(0); /* Show forgot password form */
+    transform: translateX(0);
 }
 
 
@@ -115,7 +112,7 @@ header {
     height: 45px;
     background: var(--main-color);
     font-size: 2em;
-    color: #fff;
+    color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,8 +121,6 @@ header {
     cursor: pointer;
     z-index: 10;
 }
-
-
 
 .form-box h2 {
     font-size: 2em;
